@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Scheduler</title>
 </head>
 <body>
-    
+
+    <!--Header section-->
+    <header class="container d-flex min-vw-100 justify-content-around">
+        <div class="header-row row w-100 align-items-center p-3">
+            <h1 class="col-12 col-md-9">Scheduler</h1>
+            <a class="link col-12 col-md-3" src="#">Instructions For Use</a>
+        </div>
+    </header>
+
+    <main class="container d-flex min-vw-100 justify-content-around">
+        
+        <section class = "row w-100 min-vh-100">
+            <!--Tasks Section-->
+            <div class="task-col col-12 col-md-3" >
+                <h2 class="h2"><span class="oi oi-task"></span>Task List</h2>
+                <button class="add-task-btn p-3 w-100" ><span class="oi oi-plus"></span>Add Task</button>
+            </div>
+
+            <!--Calendar Section-->
+            <div class="col-12 col-md-9">
+                <h2><span class="oi oi-calendar"></span>Calendar</h2>
+            </div>
+        </section>
+
+        <!--Task Modal Section-->
+        <section class="modal fade" id="task-form-modal" tabindex="-1" role="dialog" aria-labelledby="task-form-modal" aria-hidden="true">
+
+        </section>
+
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
