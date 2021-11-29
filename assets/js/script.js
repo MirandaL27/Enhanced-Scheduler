@@ -14,6 +14,7 @@ class task{
     repeatEveryXdays;
     dateMade;
     latestDate;
+    status;
 }
 
 var tasks = [];
@@ -96,9 +97,18 @@ var validateModalInput = function(title){
 }
 
 var updateMainTaskList = function(){
+    var taskContainerEl = $("task-col");
     for(var i= 0; i< tasks.length; i++){
         //make a new div element for each task.
         //show the title, edit/delete buttons, and status update dropdown
+        var divEl = $("<div>");
+        var pEl = $("<p>");
+        pEl.text(tasks[i].title);
+        var deleteBtn = $("<button>");
+        var editBtn = $("<button>");
+        var statusDD = $("<select>");
+        var optionEl = $("<option>");
+
     }
 }
 var addTask = function(){
@@ -115,6 +125,7 @@ var addTask = function(){
     var t = new task;
     t.title = title;
     t.notes = notes;
+    t.status = "Pending"
     //start with just saving the notes and the title. To Do: save the other fields
     tasks.push(t);
     localStorage.setItem("scheduler-tasks",JSON.stringify(tasks));
