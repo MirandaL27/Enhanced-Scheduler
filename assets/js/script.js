@@ -97,20 +97,65 @@ var validateModalInput = function(title){
 }
 
 var updateMainTaskList = function(){
-    var taskContainerEl = $("task-col");
+    var taskContainerEl = $(".tasks-container");
+    var newTaskContainerEl = $("<div>");
+    newTaskContainerEl.addClass("tasks-container");
     for(var i= 0; i< tasks.length; i++){
         //make a new div element for each task.
         //show the title, edit/delete buttons, and status update dropdown
         var divEl = $("<div>");
-        var pEl = $("<p>");
-        pEl.text(tasks[i].title);
-        var deleteBtn = $("<button>");
-        var editBtn = $("<button>");
-        var statusDD = $("<select>");
-        var optionEl = $("<option>");
+        divEl.addClass("main-tasks row justify-content-center text-center align-items-center");
 
+        var spanEl = $("<span>").addClass("oi oi-task col-1");
+        spanEl.appendTo(divEl);
+
+        var pEl = $("<p>");
+        pEl.addClass("col-4 small")
+        pEl.text(tasks[i].title);
+
+        var deleteBtn = $("<button>");
+        deleteBtn.attr("id","task-item-delete-btn");
+        deleteBtn.addClass("col-1 position-relative m-1")
+        deleteBtn.attr("style","height: 30px");
+        var spanEl = $("<span>").addClass("oi oi-trash");
+        spanEl.attr("style", "position: absolute; top: 5px; left: 7px;");
+        spanEl.appendTo(deleteBtn);
+
+        var editBtn = $("<button>");
+        editBtn.attr("id","task-item-edit-btn");
+        editBtn.addClass("col-1 position-relative m-1");
+        editBtn.attr("style","height: 30px");
+        spanEl = $("<span>").addClass("oi oi-wrench");
+        spanEl.attr("style", "position: absolute; top: 5px; left: 6px;");
+        spanEl.appendTo(editBtn);
+
+        var statusDD = $("<select>");
+        statusDD.addClass("col-3 small p-0 m-1 status-dd");
+        var optionEl = $("<option>").text("Pending");
+        optionEl.appendTo(statusDD);
+        optionEl = $("<option>").text("In Progress");
+        optionEl.appendTo(statusDD);
+        optionEl = $("<option>").text("Completed");
+        optionEl.appendTo(statusDD);
+
+        pEl.appendTo(divEl);
+        deleteBtn.appendTo(divEl);
+        editBtn.appendTo(divEl);
+        statusDD.appendTo(divEl);
+        divEl.appendTo(newTaskContainerEl);
+        
+    }
+    taskContainerEl.replaceWith(newTaskContainerEl);
+    return;
+}
+
+var loadTasks = function(){
+    var storage =  JSON.parse(localStorage.getItem("scheduler-tasks"));
+    if(storage){
+        tasks = storage;
     }
 }
+
 var addTask = function(){
     //capture all of the items on the form and put them into a task object and add the task object to the tasks array.
     var title = $("#taskTitle").val();
@@ -168,4 +213,5 @@ var modalHeaderEl = $(".ui-dialog-titlebar");
 modalCloseButtonIconEl.appendTo(modalCloseButtonEl);
 modalCloseButtonEl.appendTo(modalHeaderEl);
 
-
+loadTasks();
+updateMainTaskList();

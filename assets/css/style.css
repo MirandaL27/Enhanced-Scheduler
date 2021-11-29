@@ -1,5 +1,5 @@
 :root {
-
+    
 }
 
 .header-row{
@@ -17,13 +17,13 @@
     color:white !important;
 }
 
-.add-task-btn{
+.add-task-btn, .task-categorization-btn, .theme-setup-btn, .reward-system-btn, .text-reminders-btn{
     border-radius: 15px ;
     border: 3px solid black;
     font-size: 23px;
     transition: all 0.5s ease-in-out;
 }
-.add-task-btn:hover{
+.add-task-btn:hover, .task-categorization-btn:hover, .theme-setup-btn:hover, .reward-system-btn:hover, .text-reminders-btn:hover{
     background-color:black;
     color:white;
 }
@@ -57,3 +57,22 @@
  #taskTitle, #taskNotes, #taskDueDate, #add-checklist-btn{
      display:block;
  }
+
+ .main-tasks{
+     background-color: lightgray;
+     border-radius: 15px;
+     padding: 10px;
+     margin: 10px;
+ }
+
+ #task-item-edit-btn, #task-item-delete-btn, .status-dd{
+     transition: all 0.5s ease-in-out;
+     border-radius: 10px;
+     border: 3px solid black;
+ }
+
+ #task-item-edit-btn:hover, #task-item-delete-btn:hover, .status-dd:hover{
+     background-color: black;
+     color:white;
+ }
+
