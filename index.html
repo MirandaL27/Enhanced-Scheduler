@@ -39,7 +39,31 @@
 
         <!--Task Modal Section-->
         <section id="taskModal" class="modal" title = "New Task">
-            Task Fields
+            <form id="taskModal-form">
+                <label for="taskTitle">Task Title:</label>
+                <input id="taskTitle" required type="text"/>
+    
+                <label for="taskNotes">Task Notes:</label>
+                <input id="taskNotes" type="textarea"/>
+    
+                <label for="taskDueDate">Due Date:</label>
+                <input id="taskDueDate" type="datetime-local"/>
+                <div class="checklist-div">
+                    <label for="Add Checklist Item">Add Checklist:</label>
+                    <button id="add-checklist-btn"><span class="oi oi-plus"></span></button>
+                </div>
+    
+                <label for="repeat-select">Repeat Task</label>
+                <select name="repeat-select" id="repeat-select">
+                    <option value="Daily">Daily</option>
+                    <option value="Weekly">Weekly</option>
+                </select>
+                <p id="daily-weekly-dd">every
+                    <input id="x-days"/> <span class="days-word">days.</span>
+                </p>
+
+                <button id="add-task-modal-btn"><span class="oi oi-plus"></span>Add</button>
+            </form>
         </section>
 
 

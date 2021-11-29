@@ -53,3 +53,7 @@
  .close-modal-btn:hover{
      color:black;
  }
+
+ #taskTitle, #taskNotes, #taskDueDate, #add-checklist-btn{
+     display:block;
+ }
