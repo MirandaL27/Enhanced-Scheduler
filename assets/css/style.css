@@ -31,3 +31,25 @@
 .task-col{
     background-color: grey;
 }
+
+
+.ui-widget-header,.ui-state-default {
+    background-color: grey;
+    border: 1px solid black;
+    color: #FFFFFF;
+    font-weight: bold;
+ }
+  .ui-dialog-titlebar-close{
+     display:none;
+ }  
+ .close-modal-btn{
+    display: inline;
+    background-color: darkgrey;
+    border: 3px solid black;
+    border-radius: 10px;
+    color:white;
+
+ }
+ .close-modal-btn:hover{
+     color:black;
+ }
