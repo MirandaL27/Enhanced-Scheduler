@@ -17,6 +17,43 @@ class task{
     status;
 }
 
+var changeThemeDropDown = function(value, dDEl){
+   // var DDEl = $(".theme-options");
+    console.log(value, dDEl);
+    switch(value){
+        case "Galaxy":
+        $(dDEl).attr("style","background-image: linear-gradient(black,purple,cornflowerblue);");
+        break;
+        case "Unicorn":
+            $(dDEl).attr("style","background-image: linear-gradient(purple,pink,white);");
+        break;
+        case "Winter":
+            $(dDEl).attr("style","background-image: linear-gradient(blue,grey,white);");
+        break;
+        case "Fire":
+            $(dDEl).attr("style","background-image: linear-gradient(black,red,yellow);");
+        break;
+        case "Candy":
+            $(dDEl).attr("style","background-image: repeating-linear-gradient(45deg, pink,pink 30px, white 30px, white 60px);");
+        break;
+        case "Spring":
+            $(dDEl).attr("style","background-image: linear-gradient(green,yellow,pink);");
+        break;
+        case "Dark":
+            $(dDEl).attr("style","background-image: linear-gradient(black,darkgrey);");
+        break;
+        case "Light":
+            $(dDEl).attr("style","background-image: linear-gradient(lightgrey,white);");
+        break;
+        case "Rainbow":
+            $(dDEl).attr("style","background-image: linear-gradient(red,orange,yellow,green,blue,purple);");
+        break;
+        case "Custom":
+            $(dDEl).attr("style","background-image: linear-gradient(grey,lightgrey);");
+        break;
+    }
+}
+
 var tasks = [];
 
 var setSecondaryModalDropDown = function(ddValue){
@@ -203,6 +240,10 @@ $("body").on("click", "#add-task-modal-btn", function(event){
     event.preventDefault();
     addTask();
 
+});
+
+$(".theme-options").on("change", function(){
+    changeThemeDropDown($(this).val(), this)
 });
 
 

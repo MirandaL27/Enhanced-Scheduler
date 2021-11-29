@@ -1,5 +1,5 @@
 :root {
-    
+
 }
 
 .header-row{
@@ -74,5 +74,9 @@
  #task-item-edit-btn:hover, #task-item-delete-btn:hover, .status-dd:hover{
      background-color: black;
      color:white;
+ }
+
+ .theme-options{
+     background-image: linear-gradient(black,purple,cornflowerblue);
  }
 
