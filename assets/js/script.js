@@ -18,38 +18,56 @@ class task{
 }
 
 var changeThemeDropDown = function(value, dDEl){
-   // var DDEl = $(".theme-options");
-    console.log(value, dDEl);
     switch(value){
         case "Galaxy":
         $(dDEl).attr("style","background-image: linear-gradient(black,purple,cornflowerblue);");
+        document.documentElement.style.setProperty('--color1', '#000');
+        document.documentElement.style.setProperty('--color2', 'cornflowerblue');
         break;
         case "Unicorn":
             $(dDEl).attr("style","background-image: linear-gradient(purple,pink,white);");
+            document.documentElement.style.setProperty('--color1', 'purple');
+            document.documentElement.style.setProperty('--color2', 'pink');
         break;
         case "Winter":
             $(dDEl).attr("style","background-image: linear-gradient(blue,grey,white);");
+            document.documentElement.style.setProperty('--color1', 'black');
+            document.documentElement.style.setProperty('--color2', 'grey');
         break;
         case "Fire":
             $(dDEl).attr("style","background-image: linear-gradient(black,red,yellow);");
+            document.documentElement.style.setProperty('--color1', 'purple');
+            document.documentElement.style.setProperty('--color2', 'orange');
         break;
         case "Candy":
             $(dDEl).attr("style","background-image: repeating-linear-gradient(45deg, pink,pink 30px, white 30px, white 60px);");
+            document.documentElement.style.setProperty('--color1', 'red');
+            document.documentElement.style.setProperty('--color2', 'white');
         break;
         case "Spring":
             $(dDEl).attr("style","background-image: linear-gradient(green,yellow,pink);");
+            document.documentElement.style.setProperty('--color1', 'darkgreen');
+            document.documentElement.style.setProperty('--color2', 'yellowgreen');
         break;
         case "Dark":
             $(dDEl).attr("style","background-image: linear-gradient(black,darkgrey);");
+            document.documentElement.style.setProperty('--color1', 'lightgrey');
+            document.documentElement.style.setProperty('--color2', 'black');
         break;
         case "Light":
             $(dDEl).attr("style","background-image: linear-gradient(lightgrey,white);");
+            document.documentElement.style.setProperty('--color1', 'black');
+            document.documentElement.style.setProperty('--color2', 'white');
         break;
         case "Rainbow":
             $(dDEl).attr("style","background-image: linear-gradient(red,orange,yellow,green,blue,purple);");
+            document.documentElement.style.setProperty('--color1', 'white');
+            document.documentElement.style.setProperty('--color2', 'pink');
         break;
         case "Custom":
             $(dDEl).attr("style","background-image: linear-gradient(grey,lightgrey);");
+            document.documentElement.style.setProperty('--color1', 'black');
+            document.documentElement.style.setProperty('--color2', 'lightgrey');
         break;
     }
 }

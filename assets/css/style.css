@@ -1,5 +1,6 @@
 :root {
-
+    --color1: black;
+    --color2: cornflowerblue;
 }
 
 .header-row{
@@ -78,5 +79,10 @@
 
  .theme-options{
      background-image: linear-gradient(black,purple,cornflowerblue);
+     color: var(--color1);
+ }
+
+ .theme-opt{
+     background-color: var(--color2);
  }
 
